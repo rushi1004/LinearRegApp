@@ -1,0 +1,13 @@
+runtime: pythonx
+env: flex
+entrypoint: gunicorn -b :$PORT main:application
+
+runtime_config:
+  python version: 3
+
+manual_scaling:
+  instances: 1
+resourcse:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
